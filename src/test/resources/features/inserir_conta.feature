@@ -6,17 +6,10 @@ Funcionalidade: Cadastro de contas
   Para que eu possa distribuir meu dinheiro de uma forma mais organizada
 
   Contexto: 
-    Dado que estou acessando a aplicação
-    Quando informo o usuário "a@c"
-    E a senha "abc"
-    E seleciono entrar
-    Então visualizo a página inicial
-    Quando seleciono Contas
-    E seleciono Adicionar
+    Dado que desejo adicionar uma conta
     
   Esquema do Cenário: Deve validar regras cadastro contas
-    Quando informo a conta "<conta>"
-    E seleciono salvar
+    Quando adiciono a conta "<conta>"
     Então recebo a mensagem "<mensagem>"
     
   Exemplos:
