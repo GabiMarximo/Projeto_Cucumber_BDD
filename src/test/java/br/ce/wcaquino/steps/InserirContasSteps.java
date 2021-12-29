@@ -89,9 +89,19 @@ public class InserirContasSteps {
 	@Before
 	public void inicio() {
 		System.out.println("Começando aqui");
+	}
+	
+	@After(order = 1)
+	public void screenshot(Scenario cenario) {
+		File file = ((TakeScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(file, new File("target/screenshots"+cenario.getId()+".jpg"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}	
 		
-	@After
+	@After(order = 0)
 	public void fecharBrowser() {
 		driver.quit();
 		System.out.println("terminando");
