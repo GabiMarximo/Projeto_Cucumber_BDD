@@ -14,13 +14,13 @@ Funcionalidade: Cadastro de contas
     E seleciono Adicionar
     
   Esquema do Cenário: Deve validar regras cadastro contas
-    Quando informo a conta <conta>
+    Quando informo a conta "<conta>"
     E seleciono salvar
     Então recebo a mensagem "<mensagem>"
     
   Exemplos:
-  |       conta      |              mensagem              |
-  |  Conta de Teste  |    Conta adicionada com sucesso!   |
-  |                  |        Informe o nome da conta     |
-  | Conta mesmo nome | Já existe uma conta com esse nome! |
+    |       conta      |              mensagem              |
+    |  Conta de Teste  |    Conta adicionada com sucesso!   |
+    |                  |        Informe o nome da conta     |
+    | Conta mesmo nome | Já existe uma conta com esse nome! |
   
